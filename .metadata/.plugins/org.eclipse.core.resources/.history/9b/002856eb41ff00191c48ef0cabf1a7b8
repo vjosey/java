@@ -1,0 +1,28 @@
+package com.skillstorm.review;
+
+/*
+ * Blueprint
+ * 
+ * Generalization -> Specialization
+ * 
+ */
+public class Abstraction {
+
+}
+
+abstract class Furniture implements Moveable{
+	String style;
+	String material;
+	String legs;
+	public void move() {
+		// not fun
+	}
+	public abstract void place(Object obj);
+}
+
+interface Moveable {
+	public void move();
+}
+
+
+

@@ -1,0 +1,15 @@
+package com.skillstorm.oop;
+
+/**
+ * JavaDoc comment:   /**
+ * Fully-qualified class name:
+ * 	com.skillstorm.oop.HelloWorld
+ * 
+ * @author PWalsh
+ *
+ */
+public class HelloWorld {
+	
+	
+
+}

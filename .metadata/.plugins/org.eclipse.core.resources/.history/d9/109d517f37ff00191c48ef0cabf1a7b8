@@ -1,0 +1,11 @@
+package com.skillstorm.oop;
+
+/**
+ * 100% abstract
+ * 
+ * @author PWalsh
+ *
+ */
+public interface Domesticated {
+	public abstract void play();
+}

@@ -1,0 +1,5 @@
+package com.skillstorm.oop;
+
+public class Dog extends Animal{
+
+}

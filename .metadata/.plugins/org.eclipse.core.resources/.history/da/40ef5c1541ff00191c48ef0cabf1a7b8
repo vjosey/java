@@ -1,0 +1,24 @@
+package com.skillstorm.review;
+
+/**
+ * Reusing state and behavior in subclasses
+ * 
+ * @author PWalsh
+ *
+ */
+public class Inheritance {
+
+}
+
+class Person {
+	public void nap() {
+		System.out.println("ZzzZz");
+	}
+}
+
+class Programmer extends Person {
+	public void code() {
+		// code
+		nap();
+	}
+}

@@ -1,0 +1,21 @@
+package com.skillstorm.oop;
+
+public class Cat extends Animal{
+
+	// default constructor
+	public Cat() {
+		super();
+		// all this cool stuff
+		System.out.println("Cat()");
+	}
+	
+	public Cat(boolean nice) {
+		this();
+	}
+	
+	@Override
+	public void speak() {
+		System.out.println("Meow");
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.skillstorm.review;
+
+public class Encapsulation {
+	// 1. Always encapsulate your model classes
+	// 2. getZzzZzz setZzzZzz isBooleanVariable
+}
+
+// related state and behavior together in a protected way
+class Medicine {
+	private String activeIngredient;
+
+	public String getActiveIngredient() {
+		return activeIngredient;
+	}
+
+	public void setActiveIngredient(String activeIngredient) {
+		this.activeIngredient = activeIngredient;
+	}
+	
+	public void take() {
+		System.out.println("Yum");
+	}
+	
+}

@@ -1,0 +1,32 @@
+package com.skillstorm.oop;
+
+/**
+ * Inheritance: reuse the state and behavior of a parent class
+ * 
+ * @author PWalsh
+ *
+ */
+public final class Dog extends Animal {
+
+	public void playFetch() {
+		System.out.println("FETCH");
+	}
+	
+	public static void talk() {
+		System.out.println("DOGTALK");
+	}
+
+	public void birthday() {
+		this.setAge(this.getAge() + 1);
+	}
+	
+	public void changeLegs(int legs) {
+		this.legs = legs;
+	}
+
+	@Override
+	public void speak() {
+		System.out.println("Bark");
+	}
+	
+}

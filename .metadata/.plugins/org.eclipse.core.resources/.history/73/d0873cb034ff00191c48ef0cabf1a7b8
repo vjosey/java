@@ -1,0 +1,17 @@
+package com.skillstorm.oop;
+
+public class Abstraction {
+
+	public static void main(String[] args) {
+		//Animal a = new Animal();
+		
+		// Covariant / Virtual Method Invocation
+		Animal dan = new Dog();
+		dan.speak();
+	}
+	
+	public void pet(Animal a) {
+		// pet
+	}
+	
+}

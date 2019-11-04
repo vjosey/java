@@ -1,0 +1,34 @@
+package com.skillstorm.oop;
+
+/**
+ * Encapsulation: wrapping related state/behavior into a class
+ * 
+ * Protect those variables/methods from undesirable access
+ * 
+ * 
+ * @author PWalsh
+ *
+ */
+public class Animal {
+	// access modifier: private- only in 
+	// the same class
+	private int age;
+
+	public void eat(String food) {
+		this.digest(food);
+	}
+	
+	private void digest(String food) {}
+	
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if(age < 0) return;
+		this.age = age;
+	}
+	
+	
+	
+}

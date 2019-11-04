@@ -1,0 +1,5 @@
+package com.skillstorm.oop;
+
+public interface Domesticated {
+	public void play();
+}
