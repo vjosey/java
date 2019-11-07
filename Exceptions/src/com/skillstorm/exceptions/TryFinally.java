@@ -25,7 +25,6 @@ public class TryFinally {
 			try {
 				book.close();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

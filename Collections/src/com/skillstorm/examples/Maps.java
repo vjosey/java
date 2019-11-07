@@ -2,6 +2,7 @@ package com.skillstorm.examples;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,8 @@ public class Maps {
 		Set<String> keys = dictionary.keySet();
 		System.out.println(keys);
 		Collection<List<String>> values = dictionary.values(); // return all the values
+		values.size();
+		
 	}
 	
 }
