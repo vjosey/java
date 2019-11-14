@@ -5,6 +5,15 @@
 	id="WebApp_ID" version="3.1">
 	<display-name>training</display-name>
 
+	<servlet>
+		<servlet-name>user</servlet-name>
+		<servlet-class>com.skillstorm.training.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+
 	<!-- servlets are SINGLETONS -->
 	<servlet>
 		<servlet-name>howard</servlet-name>
