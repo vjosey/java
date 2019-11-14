@@ -101,8 +101,9 @@ public class ArtistDAO {
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setInt(1, id);
 		int rows = stmt.executeUpdate();
-		conn.commit();
+		//conn.commit();
 		System.out.println(rows + " row(s) deleted.");
+		//conn.close();
 	}
 
 }
