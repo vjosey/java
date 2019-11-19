@@ -1,0 +1,73 @@
+<html>
+    <div></div>
+    <button onclick="glob()">Global</button>
+    <script>
+        // truthy / falsy 
+        function test(){
+            // var x =0; // pretend all variable declarations are here
+            // object literal
+            var obj = {
+                flavor: 'Dill',
+                cut: 'Spears'
+            };
+            // pre ES6: create an object
+            var pickles = new Pickle('Dill', 'Spears');
+            function Pickle(f, c){
+                this.flavor = f;
+                this.cut = c;
+            }
+            
+            var boo = 100;
+            // strict equality 100 === '100'
+            // value and type
+            if(boo === '100') { 
+                document.getElementsByTagName('div')[0]
+                    .innerText = 'True';
+            }else{
+                document.getElementsByTagName('div')[0]
+                    .innerText = 'False'
+            }
+            // no var keyword === hoisting to global scope
+            y = 'Hello Worlds'; // global scope
+            for(var x=0; x< 10; x++){
+                console.log(x);
+            }
+            // hoisting x to the test function
+            // 2 scopes... local.. global
+            console.log(x);
+            
+            // ES6 let (block scope) .. mimics Java block scope
+            for(let z=0;z<10;z++){
+                console.log(z);
+            }
+            //console.log(z);
+
+            // ES6 block scope (final variable)
+            do{
+                const five = 5;
+                pickle(); // hoisting methods
+                break;
+            }while(boo){}
+            console.log(five);
+
+            function pickle(){
+                window.alert('Pickles');
+            }
+        }
+
+        function glob(){
+            window.alert(y);
+            pickle();
+        }
+        // you may reference elements that have not been rendered
+        // UNDEFINED.. ERRORS
+        //window.onload = test(); 
+
+        // will execute when the ENTIRE DOM is loaded
+        // only foolproof way..
+        document.addEventListener('DOMContentLoaded', test);
+    </script>
+</html>
+
+
+

@@ -43,6 +43,7 @@ public class ArtistController {
 		resp.setContentType("application/json");
 		artistService.update(new ObjectMapper().readValue(req.getInputStream(), Artist.class));
 		resp.setStatus(204);
+		
 	}
 
 	// DELETE /chinook/api/artist?id=1

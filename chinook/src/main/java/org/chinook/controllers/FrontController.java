@@ -13,6 +13,10 @@ public class FrontController extends HttpServlet {
 
 	protected void doDispatch(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
+		if(req.getRequestURI().contains("hello")) {
+			resp.getWriter().append("Artist API. Written by Dan Pickles");
+			resp.setStatus(200);
+		}
 		switch (uri) {
 		case "/chinook/api/artist":
 			if (req.getMethod().equals("POST")) {
