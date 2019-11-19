@@ -1,0 +1,20 @@
+<html>
+    <img src="off.PNG" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            // image swap after a given time 
+            // polling 
+            window.setInterval(function(){
+                var src = document.getElementsByTagName('img')[0].src;
+                console.log(src);
+                if(src.indexOf('on.PNG')!=-1){
+                    document.getElementsByTagName('img')[0].setAttribute('src', 'off.PNG');
+                }else{
+                    document.getElementsByTagName('img')[0].setAttribute('src', 'on.PNG');
+                }
+            }, 1000);
+        });
+    </script>
+
+</html>

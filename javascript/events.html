@@ -1,0 +1,38 @@
+<html>
+    <div id="a" style="background-color: blue;">
+        <table id="b" style="background-color: brown;">
+                <tr><th>Name</th><th>Job Title</th></tr>
+                <tr id="c" style="background-color: greenyellow;">
+                    <td>Dan Pickles</td><td>CEO</td></tr>
+                <tr id="d" style="background-color: hotpink;">
+                    <td>Randolph Scott</td><td>VP</td></tr>
+        </table>
+        <button onclick="clone()">Clone</button>
+    </div>
+    <script>
+        function clone(){
+            // DOM manipulation
+            var tr = document.createElement('tr');
+            tr.id = 'e';
+            var tdName = document.createElement('td');
+            tdName.innerText = 'Dan Pickles';
+            var tdTitle = document.createElement('td');
+            tdTitle.innerText = 'Clone';
+            tr.appendChild(tdName); tr.appendChild(tdTitle); 
+            document.getElementById('b').appendChild(tr);
+        }
+        // window will pass 'event' object to your callback function
+        document.getElementById('b')
+            .addEventListener('click', function(event){
+                console.log('table: ' + event.target);
+            }, true);
+        document.getElementById('a')
+            .addEventListener('click', function(event){
+                console.log('div: ' + event.target);
+                event.stopPropagation(); // no more bubble
+            }, true); // useCapture
+        document.addEventListener('click', function(event){
+            console.log('html: ' + event.target);
+        }, true);
+    </script>
+</html>

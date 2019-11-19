@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <!-- event-driven programming -->
+        <button onclick="hello()">Click</button> <!-- 1. -->
+        <button id="bloop">Bloop</button> <!-- 2. the better way -->
+    </body>
+
+    <script>
+        // javascript
+        // 1.
+        function hello(){
+            window.alert('Hello World');
+        }
+        // 2. document === Document Object Model (DOM)
+        // callback function
+        document.getElementById('bloop')
+            .addEventListener('click', hello);
+    </script>
+</html>
