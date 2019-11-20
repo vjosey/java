@@ -73,9 +73,11 @@ public class ArtistDAO {
 		Connection conn = getConnection();
 		LinkedList<Artist> results = new LinkedList<>();
 		try {
-			ResultSet rs = conn.prepareStatement("select * from artist").executeQuery();
+			ResultSet rs = conn.prepareStatement("select * from artist")
+					.executeQuery();
 			while (rs.next()) {
-				Artist a = new Artist(rs.getInt("artistId"), rs.getString("name"));
+				Artist a = new Artist(rs.getInt("artistId"), 
+						rs.getString("name"));
 				results.add(a);
 			}
 		} catch (SQLException e) {

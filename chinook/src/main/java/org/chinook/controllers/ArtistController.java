@@ -25,7 +25,8 @@ public class ArtistController {
 	}
 
 	// GET /chinook/api/artist?id=1
-	public void getArtist(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void getArtist(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
 		resp.setContentType("application/json");
 		if (req.getParameter("id") != null) {
 			resp.getWriter().println(new ObjectMapper()
@@ -34,7 +35,8 @@ public class ArtistController {
 			resp.getWriter().println(
 					new ObjectMapper().writeValueAsString(artistService.searchByName(req.getParameter("name"))));
 		} else {
-			resp.getWriter().println(new ObjectMapper().writeValueAsString(artistService.findAll()));
+			resp.getWriter().println(new ObjectMapper()
+					.writeValueAsString(artistService.findAll()));
 		}
 	}
 
