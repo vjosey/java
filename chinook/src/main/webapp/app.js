@@ -9,7 +9,7 @@ document.getElementById('add').addEventListener('submit',
        let api = `http://localhost:8080/chinook/api/artist?id=${id}` 
        // template literal (string interpolation)
        console.log(id);
-       let url = 'http://localhost:8080/chinook/api/artist';
+       let url = '/chinook/api/artist';
        let promise = axios.post(url, artist);
        // 1 callback for a successful response
        promise.then(response => {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // ajax call (XMLHttpRequest: xhr) to fetch artists
     var xhr = new XMLHttpRequest();
     // ready state 0 - unopened
-    xhr.open('GET', 'http://localhost:8080/chinook/api/artist');
+    xhr.open('GET', '/chinook/api/artist');
     // ready state 1 - opened
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
