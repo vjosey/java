@@ -51,7 +51,10 @@
 				</configuration>
 			</plugin>
 			
-			<!-- Tomcat Maven Plugin  -->
+			<!-- Tomcat Maven Plugin : 
+				Maven goal (build lifecycle phase: compile, test, package, install, deploy)
+				tomcat7:deploy (install)
+			 -->
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
