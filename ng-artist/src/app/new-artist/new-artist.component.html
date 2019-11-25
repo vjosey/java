@@ -1,0 +1,14 @@
+<div>
+  <span>{{ artistObj.name }}</span>
+  <form (ngSubmit)="add(); artistForm.reset()"
+      #artistForm='ngForm'>
+      <!-- 2-way data binding. -->
+      <input type='number'
+          [(ngModel)]="artistObj.artistId"
+          name="artistId" /> <br/>
+      <input type='text'
+          [(ngModel)]="artistObj.name"
+          name="name" /> <br/>
+      <input type='submit' value='Add' />
+  </form>
+</div>
