@@ -6,6 +6,16 @@
 	
 	<display-name>chinook</display-name>
 	
+	<filter>
+		<filter-name>cors</filter-name>
+		<filter-class>org.chinook.controllers.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>cors</filter-name>
+		<url-pattern>/api/*</url-pattern>
+	</filter-mapping>
+	
+	
 	<servlet>
 		<servlet-name>front</servlet-name>
 		<servlet-class>org.chinook.controllers.FrontController</servlet-class>
