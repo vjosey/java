@@ -1,0 +1,20 @@
+<!-- conditionally render a DOM element with *ngIf
+structural directive -->
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+<!-- attribute directive -->
+<div [ngClass]="{'alert alert-danger': error == true}"
+  class="alert alert-success">
+    All's good?
+</div>
+<form (ngSubmit)="add()">
+  <div class="form-group">
+    <label>Artist Name</label>
+    <input [(ngModel)]="temp.name"
+      type="text" class="form-control"
+      placeholder="name.."
+      name="pickles">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Artist</button>
+</form>
