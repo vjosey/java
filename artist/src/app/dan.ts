@@ -1,1 +1,4 @@
-;asd;hafd;hads;fhdln
+
+export class Dan {
+	
+}
