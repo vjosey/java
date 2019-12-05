@@ -9,6 +9,11 @@ public class StuffService {
 	}
 	public void doSomething() {
 		System.out.println("doSomething()");
+		double x = Math.random();
+		System.out.println(x);
+		if(x < 0.25) {
+			throw new RuntimeException("pickles");
+		}
 	}
 	public String doSomething(int x, String str) {
 		System.out.println("doSomething(int x, String str)");

@@ -22,7 +22,7 @@ public class MainApplication {
 		service.doSomethingElse();
 		service.doWork();
 		service.stuff();
-		new StuffService().doSomething(); // only Spring beans are advised
+		// new StuffService().doSomething(); // only Spring beans are advised
 		context.getBean(AnotherService.class).service();
 	}
 
