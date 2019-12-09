@@ -1,0 +1,21 @@
+# Spring Boot
+
+# change server port
+server:
+  port: 8080
+
+# set the application name
+spring:
+  application:
+    name: artist-api   
+  datasource:
+    url: jdbc:mysql://localhost:3306/chinook
+    username: root
+    password: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+
+# spring.application.datasource.url= 
+# spring.application.datasource.username= 
+# spring.application.datasource.password= 

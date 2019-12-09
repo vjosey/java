@@ -1,0 +1,10 @@
+<div>
+  <form
+  (ngSubmit)="addArtist(); artform.reset()" #artform>
+    <input [(ngModel)]="temp.artistId"
+      type="text" name="artistId" />
+    <input [(ngModel)]="temp.name"
+      type="text" name="name" />
+    <input type="submit" value="Add" />
+  </form>
+</div>

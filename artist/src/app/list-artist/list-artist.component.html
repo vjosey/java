@@ -1,0 +1,14 @@
+<div id="list">
+  <table class="table table-striped">
+    <thead>
+      <tr><th>Artist Id</th><th>Artist Name</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artist of listOfArtists">
+        <td>{{ artist.artistId }}</td><td>{{ artist.name }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+</div>

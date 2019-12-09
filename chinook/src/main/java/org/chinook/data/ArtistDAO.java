@@ -12,12 +12,13 @@ import java.util.Set;
 
 import org.chinook.beans.Artist;
 
+// My ArtistDAO
 public class ArtistDAO {
 
 	public Connection getConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/chinook", "root", "root");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://my-sql.comtwymwozca.us-east-2.rds.amazonaws.com:3306/chinook", "admin", "adminadmin");
 			return conn;
 		} catch (SQLException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
@@ -73,9 +74,11 @@ public class ArtistDAO {
 		Connection conn = getConnection();
 		LinkedList<Artist> results = new LinkedList<>();
 		try {
-			ResultSet rs = conn.prepareStatement("select * from artist").executeQuery();
+			ResultSet rs = conn.prepareStatement("select * from artist")
+					.executeQuery();
 			while (rs.next()) {
-				Artist a = new Artist(rs.getInt("artistId"), rs.getString("name"));
+				Artist a = new Artist(rs.getInt("artistId"), 
+						rs.getString("name"));
 				results.add(a);
 			}
 		} catch (SQLException e) {

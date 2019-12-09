@@ -1,0 +1,21 @@
+/*
+  <element id='abc' class='deg'>
+  <element id='xyz' class='deg'>
+
+  #abc {} id selector
+  .deg {} class selector
+  element {} element selector
+  div {}
+  footer {}
+
+  a:hover {} pseudo selector
+  a:visited {}
+
+*/
+#list {
+  border: 0.1em;
+  padding: 1em;
+  margin: 2em;
+  border-style: groove;
+  border-color: black;
+}
